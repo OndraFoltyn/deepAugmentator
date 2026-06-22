@@ -45,6 +45,16 @@ security-log-augmentation-framework/
 │   ├── llama_training.py         # Fine-tuning for LLaMA 3.2
 │   ├── smollm2_instruct_training.py  # Fine-tuning for SmolLM2
 │   └── run.sh                    # Training launcher — select model and dataset path here
+├── auto_train/
+│   ├── train.py                  # Entry point for automated training runs
+│   ├── train_auto.sh             # Shell launcher for auto_train
+│   └── src/
+│       ├── cli.py                # CLI argument parsing
+│       ├── data.py               # Dataset loading and preprocessing
+│       ├── json_dataset_to_hugging_face.py  # Converts JSON datasets to HuggingFace format
+│       ├── logger_utils.py       # Logging utilities
+│       ├── register_model.py     # MLflow model registration
+│       └── training_functions.py # Core training logic
 └── MLflow_model_load/
     └── MLM_models.ipynb          # Notebook for loading and testing models from MLflow registry
 ```
